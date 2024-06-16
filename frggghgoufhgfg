@@ -1,0 +1,119 @@
+function Seek()
+while true do wait(0.2)
+pcall(function()
+workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
+workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
+workspace.SeekMoving.Figure.Scream.Pitch = 0.8
+workspace.SeekMoving.Figure.Scream.RollOffMaxDistance = 10000
+workspace.SeekMoving.Figure.Scream.RollOffMinDistance = 10
+workspace.SeekMoving.SeekRig.LeftLowerArm.Color = Color3.new(255,0,0)
+workspace.SeekMoving.SeekRig.LeftLowerArm.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightLowerLeg.Color = Color3.new(255,0,0)
+workspace.SeekMoving.SeekRig.RightLowerLeg.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightUpperArm.Color = Color3.new(255,0,0)
+workspace.SeekMoving.SeekRig.RightUpperArm.Material = "Neon"
+local eye1 = game:GetObjects("rbxassetid://11574477069")[1]
+eye1.Parent = SeekMoving.SeekRig.Head
+local weldingconstraint = Instance.new("WeldConstraint", seek.SeekRig.Head)
+eye1:PivotTo(SeekMoving.SeekRig.Head.CFrame)
+weldingconstraint.Part0 = SeekMoving.SeekRig.Head
+weldingconstraint.Part1 = eye1.Part
+end)
+end
+end
+
+function Seeka()
+while true do wait(0.2)
+pcall(function()
+workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
+workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
+workspace.SeekMoving.Figure.Scream.Pitch = 0.8
+workspace.SeekMoving.Figure.Scream.RollOffMaxDistance = 10000
+workspace.SeekMoving.Figure.Scream.RollOffMinDistance = 10
+workspace.SeekMoving.SeekRig.LeftLowerArm.Color = Color3.new(1,0,0)
+workspace.SeekMoving.SeekRig.LeftLowerArm.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightLowerLeg.Color = Color3.new(13,243,255)
+workspace.SeekMoving.SeekRig.RightLowerLeg.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightUpperArm.Color = Color3.new(255,0,0)
+workspace.SeekMoving.SeekRig.RightUpperArm.Material = "Neon"
+local eye1 = game:GetObjects("rbxassetid://11574477069")[1]
+eye1.Parent = SeekMoving.SeekRig.Head
+local weldingconstraint = Instance.new("WeldConstraint", seek.SeekRig.Head)
+eye1:PivotTo(SeekMoving.SeekRig.Head.CFrame)
+weldingconstraint.Part0 = SeekMoving.SeekRig.Head
+weldingconstraint.Part1 = eye1.Part
+end)
+end
+end
+
+function Seekb()
+while true do wait(0.2)
+pcall(function()
+workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
+workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
+workspace.SeekMoving.Figure.Scream.Pitch = 0.8
+workspace.SeekMoving.Figure.Scream.RollOffMaxDistance = 10000
+workspace.SeekMoving.Figure.Scream.RollOffMinDistance = 10
+workspace.SeekMoving.SeekRig.LeftLowerArm.Color = Color3.new(255,227,13)
+workspace.SeekMoving.SeekRig.LeftLowerArm.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightLowerLeg.Color = Color3.new(46,3,99)
+workspace.SeekMoving.SeekRig.RightLowerLeg.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightUpperArm.Color = Color3.new(255,0,0)
+workspace.SeekMoving.SeekRig.RightUpperArm.Material = "Neon"
+local eye1 = game:GetObjects("rbxassetid://11574477069")[1]
+eye1.Parent = SeekMoving.SeekRig.Head
+local weldingconstraint = Instance.new("WeldConstraint", seek.SeekRig.Head)
+eye1:PivotTo(SeekMoving.SeekRig.Head.CFrame)
+weldingconstraint.Part0 = SeekMoving.SeekRig.Head
+weldingconstraint.Part1 = eye1.Part
+end)
+end
+end
+
+function Seekc()
+while true do wait(0.2)
+pcall(function()
+workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
+workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
+workspace.SeekMoving.Figure.Scream.Pitch = 0.8
+workspace.SeekMoving.Figure.Scream.RollOffMaxDistance = 10000
+workspace.SeekMoving.Figure.Scream.RollOffMinDistance = 10
+workspace.SeekMoving.SeekRig.LeftLowerArm.Color = Color3.new(46,3,99)
+workspace.SeekMoving.SeekRig.LeftLowerArm.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightLowerLeg.Color = Color3.new(46,3,99)
+workspace.SeekMoving.SeekRig.RightLowerLeg.Material = "Neon"
+workspace.SeekMoving.SeekRig.RightUpperArm.Color = Color3.new(46,3,99)
+workspace.SeekMoving.SeekRig.RightUpperArm.Material = "Neon"
+local eye1 = game:GetObjects("rbxassetid://11574477069")[1]
+eye1.Parent = SeekMoving.SeekRig.Head
+local weldingconstraint = Instance.new("WeldConstraint", seek.SeekRig.Head)
+eye1:PivotTo(SeekMoving.SeekRig.Head.CFrame)
+weldingconstraint.Part0 = SeekMoving.SeekRig.Head
+weldingconstraint.Part1 = eye1.Part
+end)
+end
+end
+
+
+
+
+pcall(function()
+local SeekPas = coroutine.wrap(Seek)
+SeekPas()
+end)
+pcall(function()
+local SeekaPas = coroutine.wrap(Seeka)
+SeekaPas()
+end)
+pcall(function()
+local SeekbPas = coroutine.wrap(Seekb)
+SeekbPas()
+end)
+pcall(function()
+local SeekcPas = coroutine.wrap(Seekc)
+SeekcPas()
+end)
