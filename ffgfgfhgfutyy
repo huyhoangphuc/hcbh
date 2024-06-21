@@ -46,19 +46,19 @@ local entity = Spawner.createEntity({
 EntitySounds = { -- Can Get rid Of
 PlaySound = {
               "https://github.com/Nowhywhat/Doors-mode/blob/main/a-60-sound-(far)-made-with-Voicemod.mp3?raw=true", -- SoundId Link or Roblox ID
-            { Volume = 0 }, -- Sound properties
+            { Volume = 3 }, -- Sound properties
        },
         
                    
           Footsteps = {
              "https://github.com/Nowhywhat/Doors-mode/blob/main/a-60-sound-(far)-made-with-Voicemod.mp3?raw=true", -- SoundId Link or Roblox ID
-              { Volume = 0 }, -- Sound properties
+              { Volume = 3 }, -- Sound properties
           },
     }, -- Up to Here
 
     Cycles = {
-        Min = 10,
-        Max = 10,
+        Min = 4,
+        Max = 4,
         WaitTime = 1,
     },
     CamShake = {
