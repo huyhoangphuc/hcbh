@@ -1,0 +1,8 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/Spawn-entity/main/Bitera"))()
+wait(0.1)
+if  game.ReplicatedStorage.GameData.LatestRoom.Value ~= 50 then
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+else
+Wait(0.1)
+end
+game.Workspace:FindFirstChild("Bitera"):Destroy()
