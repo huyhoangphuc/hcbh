@@ -1,7 +1,7 @@
 function Seek()
 while true do wait(0.2)
 pcall(function()
-workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.Ambience.SoundId = "https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true"
 workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
 workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
 workspace.SeekMoving.Figure.Scream.Pitch = 0.8
@@ -26,7 +26,7 @@ end
 function Seeka()
 while true do wait(0.2)
 pcall(function()
-workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.Ambience.SoundId = "https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true"
 workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
 workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
 workspace.SeekMoving.Figure.Scream.Pitch = 0.8
@@ -51,7 +51,7 @@ end
 function Seekb()
 while true do wait(0.2)
 pcall(function()
-workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.Ambience.SoundId = "https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true"
 workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
 workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
 workspace.SeekMoving.Figure.Scream.Pitch = 0.8
@@ -76,7 +76,7 @@ end
 function Seekc()
 while true do wait(0.2)
 pcall(function()
-workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1846988541"
+workspace.SeekMoving.Ambience.SoundId = "https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true"
 workspace.SeekMoving.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
 workspace.SeekMoving.Figure.Scream.SoundId = "rbxassetid://7038913023"
 workspace.SeekMoving.Figure.Scream.Pitch = 0.8
